@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <h2>Flipkart</h2>
+            <span>Explore Plus ✨</span>
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+            <span>🔍</span>
+            <input id="searchInput" type="text" placeholder="Search for Products, Brands and More">
+        </div>
+
+        <!-- Login -->
+        <button class="login-btn" onclick="openLogin()">Login</button>
+
+        <!-- Become a Seller -->
+        <div class="seller">
+            Become a Seller
+        </div>
+
+        <!-- More -->
+        <div class="more">
+            More ▾
+        </div>
+
+        <!-- Cart -->
+        <div class="cart" onclick="openCart()">
+    🛒 Cart (<span id="cartCount">0</span>)
+</div>
+    </header>
+    <!-- Categories -->
+
+<section class="categories">
+
+    <div class="category">
+        <div class="category-icon">🛒</div>
+        <p>Grocery</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">📱</div>
+        <p>Mobiles</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">👕</div>
+        <p>Fashion</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">💻</div>
+        <p>Electronics</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">🛋️</div>
+        <p>Home</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">📺</div>
+        <p>Appliances</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">✈️</div>
+        <p>Travel</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">🧸</div>
+        <p>Toys & More</p>
+    </div>
+
+    <div class="category">
+        <div class="category-icon">🚗</div>
+        <p>Two Wheelers</p>
+    </div>
+
+</section>
+<!-- Main Banner -->
+
+<section class="main-banner">
+
+    <div class="banner-content">
+        <h1>Big Saving Days</h1>
+        <h2>Up to 70% Off</h2>
+        <p>Best Deals on Electronics & Fashion</p>
+
+        <button>Shop Now</button>
+    </div>
+
+    <div class="banner-image">
+        <div class="product-circle">📱</div>
+        <div class="product-circle">💻</div>
+        <div class="product-circle">👟</div>
+    </div>
+
+</section>
+ <!-- Products Section -->
+
+<section class="products-section">
+
+    <div class="section-title">
+        <h2>Best Deals on Electronics</h2>
+        <button>View All</button>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone">
+            </div>
+            <h3>Smartphone</h3>
+            <p class="rating">⭐ 4.5</p>
+            <p class="price">₹14,999</p>
+            <p class="offer">20% off</p>
+            <button class="add-cart" onclick="addToCart('Smartphone')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853" alt="Laptop">
+            </div>
+            <h3>Laptop</h3>
+            <p class="rating">⭐ 4.4</p>
+            <p class="price">₹49,999</p>
+            <p class="offer">15% off</p>
+            <button class="add-cart" onclick="addToCart('Laptop')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphones">
+            </div>
+            <h3>Wireless Headphones</h3>
+            <p class="rating">⭐ 4.3</p>
+            <p class="price">₹1,499</p>
+            <p class="offer">35% off</p>
+            <button class="add-cart" onclick="addToCart('Wireless Headphones')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">⌚</div>
+            <h3>Smart Watch</h3>
+            <p class="rating">⭐ 4.2</p>
+            <p class="price">₹2,999</p>
+            <p class="offer">25% off</p>
+            <button class="add-cart" onclick="addToCart('Smart Watch')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">📷</div>
+            <h3>Digital Camera</h3>
+            <p class="rating">⭐ 4.6</p>
+            <p class="price">₹39,999</p>
+            <p class="offer">10% off</p>
+            <button class="add-cart" onclick="addToCart('Digital Camera')">Add to Cart</button>
+        </div>
+
+    </div>
+
+</section>
+        </div>
+
+    </div>
+
+</section>
+<!-- Fashion Products -->
+
+<section class="products-section">
+
+    <div class="section-title">
+        <h2>Top Fashion Deals</h2>
+        <button>View All</button>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="T-Shirt">
+            </div>
+            <h3>Men's T-Shirt</h3>
+            <p class="rating">⭐ 4.4</p>
+            <p class="price">₹499</p>
+            <p class="offer">50% off</p>
+            <button class="add-cart" onclick="addToCart('Men T-Shirt')">
+    Add to Cart
+</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Shoes">
+            </div>
+            <h3>Sports Shoes</h3>
+            <p class="rating">⭐ 4.5</p>
+            <p class="price">₹1,299</p>
+            <p class="offer">40% off</p>
+            <button class="add-cart" onclick="addToCart('Sports Shoes')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3" alt="Jeans">
+            </div>
+            <h3>Men's Jeans</h3>
+            <p class="rating">⭐ 4.3</p>
+            <p class="price">₹899</p>
+            <p class="offer">35% off</p>
+            <button class="add-cart" onclick="addToCart('Men Jeans')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1" alt="Dress">
+            </div>
+            <h3>Women's Dress</h3>
+            <p class="rating">⭐ 4.6</p>
+            <p class="price">₹999</p>
+            <p class="offer">45% off</p>
+            <button class="add-cart" onclick="addToCart('Women Dress')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee" alt="Cap">
+            </div>
+            <h3>Stylish Cap</h3>
+            <p class="rating">⭐ 4.2</p>
+            <p class="price">₹299</p>
+            <p class="offer">30% off</p>
+            <button class="add-cart" onclick="addToCart('Stylish Cap')">Add to Cart</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- Footer -->
+
+<footer class="footer">
+
+    <div class="footer-column">
+        <h4>ABOUT</h4>
+        <p>Contact Us</p>
+        <p>About Us</p>
+        <p>Careers</p>
+        <p>Flipkart Stories</p>
+        <p>Press</p>
+    </div>
+
+    <div class="footer-column">
+        <h4>HELP</h4>
+        <p>Payments</p>
+        <p>Shipping</p>
+        <p>Cancellation & Returns</p>
+        <p>FAQ</p>
+    </div>
+
+    <div class="footer-column">
+        <h4>CONSUMER POLICY</h4>
+        <p>Cancellation & Returns</p>
+        <p>Terms Of Use</p>
+        <p>Security</p>
+        <p>Privacy</p>
+    </div>
+
+    <div class="footer-column">
+        <h4>SOCIAL</h4>
+        <p>Facebook</p>
+        <p>Instagram</p>
+        <p>YouTube</p>
+        <p>Twitter</p>
+    </div>
+
+    <div class="footer-column">
+        <h4>MAIL US</h4>
+        <p>Flipkart Clone</p>
+        <p>Jaipur, Rajasthan</p>
+        <p>India</p>
+    </div>
+
+</footer>
+
+<div class="footer-bottom">
+    
+</div>
+<script src="script.js"></script>
+<div id="loginPopup" class="login-popup">
+    <div class="login-box">
+        <span class="close" onclick="closeLogin()">×</span>
+
+        <h2>Login</h2>
+
+        <input type="text" placeholder="Enter Email">
+        <input type="password" placeholder="Enter Password">
+
+        <button>Login</button>
+    </div>
+</div>
+<div id="cartPopup" class="cart-popup">
+    <div class="cart-box">
+        <span class="close-cart">×</span>
+
+        <h2>My Cart</h2>
+
+        <p>Your cart is empty.</p>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
