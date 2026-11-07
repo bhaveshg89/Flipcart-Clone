@@ -48,11 +48,16 @@ function openCart() {
         <h2>My Cart</h2>
        ${cartItems.map((item, index) => `
     <p>
-        ${item}
+        ${item} - ₹${cartPrices[index]}
         <button onclick="removeFromCart(${index})">Remove</button>
     </p>
 `).join("")}
     `;
+    const totalPrice = cartPrices.reduce((total, price) => total + price, 0);
+
+cartItemsDiv.querySelector(".cart-box").innerHTML += `
+    <h3>Total: ₹${totalPrice.toLocaleString("en-IN")}</h3>
+`;
 
     cartItemsDiv.style.display = "flex";
 }
@@ -64,6 +69,7 @@ function closeCart() {
 }
 function removeFromCart(index) {
     cartItems.splice(index, 1);
+    cartPrices.splice(index, 1);
 
     cartCount = cartItems.length;
 
