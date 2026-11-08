@@ -45,7 +45,8 @@ function openCart() {
 
     cartItemsDiv.querySelector(".cart-box").innerHTML = `
         <span class="close-cart" onclick="closeCart()">×</span>
-        <h2>My Cart</h2>
+        <h2>🛒 My Shopping Cart</h2>
+        ${cartItems.length === 0 ? "<p>Your cart is empty!</p>" : ""}
        ${cartItems.map((item, index) => `
     <p>
         ${item} - ₹${cartPrices[index]}
