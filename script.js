@@ -46,6 +46,9 @@ function openCart() {
     cartItemsDiv.querySelector(".cart-box").innerHTML = `
         <span class="close-cart" onclick="closeCart()">×</span>
         <h2>🛒 My Shopping Cart</h2>
+        <button onclick="closeCart()" class="continue-shopping">
+    Continue Shopping
+</button>
         ${cartItems.length === 0 ? "<p>Your cart is empty!</p>" : ""}
        ${cartItems.map((item, index) => `
     <p>
