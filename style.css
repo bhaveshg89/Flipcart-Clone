@@ -582,7 +582,45 @@ body {
 }
 
 
+.login-box {
+    width: 380px;
+    max-width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
 
+.login-box h2 {
+    color: #2874f0;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #2874f0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+}
 
 
 
