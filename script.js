@@ -93,7 +93,11 @@ function togglePassword() {
     }
 }
 
-
+document.getElementById("loginPopup").addEventListener("click", function(event) {
+    if (event.target.id === "loginPopup") {
+        closeLogin();
+    }
+});
 
 
 
