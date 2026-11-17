@@ -117,7 +117,18 @@ backToTopBtn.addEventListener("click", function () {
     });
 });
 
+function subscribeNewsletter() {
+    const email = document.getElementById("newsletterEmail").value;
 
+    if (email === "") {
+        alert("Please enter your email address!");
+    } else if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email address!");
+    } else {
+        alert("Thank you for subscribing! 🎉");
+        document.getElementById("newsletterEmail").value = "";
+    }
+}
 
 
 
