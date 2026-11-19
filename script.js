@@ -137,10 +137,29 @@ function toggleDarkMode() {
 
     if (document.body.classList.contains("dark-mode")) {
         button.textContent = "☀️ Light Mode";
+        localStorage.setItem("darkMode", "enabled");
     } else {
         button.textContent = "🌙 Dark Mode";
+        localStorage.setItem("darkMode", "disabled");
     }
 }
+
+
+window.addEventListener("DOMContentLoaded", function () {
+    const darkModeBtn = document.getElementById("darkModeBtn");
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        darkModeBtn.textContent = "☀️ Light Mode";
+    }
+});
+
+
+
+
+
+
+
 
 
 
