@@ -797,6 +797,36 @@ body.dark-mode {
     color: white;
 }
 
+.search-box button {
+    background: #2874f0;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #1558bd;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

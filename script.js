@@ -154,7 +154,15 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+function clearSearch() {
+    const searchInput = document.getElementById("searchInput");
 
+    searchInput.value = "";
+
+    productCards.forEach(function (card) {
+        card.style.display = "block";
+    });
+}
 
 
 
