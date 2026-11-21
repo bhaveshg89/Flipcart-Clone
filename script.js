@@ -164,6 +164,59 @@ function clearSearch() {
     });
 }
 
+function sortProducts() {
+    const sortValue = document.getElementById("sortProducts").value;
+    const cards = document.querySelectorAll(".product-card");
+
+    const groups = {};
+
+    cards.forEach(function (card, index) {
+        if (card.dataset.originalOrder === undefined) {
+            card.dataset.originalOrder = index;
+        }
+
+        const parent = card.parentElement;
+
+        if (!groups[parent]) {
+            groups[parent] = [];
+        }
+
+        groups[parent].push(card);
+    });
+
+    Object.values(groups).forEach(function (group) {
+        group.sort(function (a, b) {
+            const priceA = Number(
+                (a.textContent.match(/₹\s*([\d,]+)/) || ["", "0"])[1].replace(/,/g, "")
+            );
+
+            const priceB = Number(
+                (b.textContent.match(/₹\s*([\d,]+)/) || ["", "0"])[1].replace(/,/g, "")
+            );
+
+            if (sortValue === "low") return priceA - priceB;
+            if (sortValue === "high") return priceB - priceA;
+
+            if (sortValue === "name") {
+                return a.querySelector("h3").textContent.localeCompare(
+                    b.querySelector("h3").textContent
+                );
+            }
+
+            return Number(a.dataset.originalOrder) - Number(b.dataset.originalOrder);
+        });
+
+        group.forEach(function (card) {
+            card.parentElement.appendChild(card);
+        });
+    });
+}
+
+
+
+
+
+
 
 
 
