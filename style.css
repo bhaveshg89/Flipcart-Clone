@@ -845,6 +845,25 @@ body.dark-mode {
     color: white;
 }
 
+#noResultsMessage {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff6161;
+    padding: 40px 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.dark-mode #noResultsMessage {
+    background: #1e1e1e;
+    color: #ff7777;
+}
+
+
+
+
 
 
 

@@ -4,21 +4,22 @@ const searchInput = document.getElementById("searchInput");
 const productCards = document.querySelectorAll(".product-card");
 
 searchInput.addEventListener("input", function () {
-
     const searchText = this.value.toLowerCase();
+    let visibleCount = 0;
 
     productCards.forEach(function (card) {
-
         const productName = card.querySelector("h3").textContent.toLowerCase();
 
         if (productName.includes(searchText)) {
             card.style.display = "block";
+            visibleCount++;
         } else {
             card.style.display = "none";
         }
-
     });
 
+    document.getElementById("noResultsMessage").style.display =
+        visibleCount === 0 ? "block" : "none";
 });
 function openLogin() {
     document.getElementById("loginPopup").style.display = "flex";
@@ -162,6 +163,8 @@ function clearSearch() {
     productCards.forEach(function (card) {
         card.style.display = "block";
     });
+
+    document.getElementById("noResultsMessage").style.display = "none";
 }
 
 function sortProducts() {
@@ -211,6 +214,15 @@ function sortProducts() {
         });
     });
 }
+
+
+
+
+
+
+
+
+
 
 
 
