@@ -215,7 +215,16 @@ function sortProducts() {
     });
 }
 
+let wishlistItems = [];
 
+function addToWishlist(productName) {
+    if (wishlistItems.includes(productName)) {
+        alert(productName + " is already in your Wishlist ❤️");
+    } else {
+        wishlistItems.push(productName);
+        alert(productName + " added to Wishlist ❤️");
+    }
+}
 
 
 

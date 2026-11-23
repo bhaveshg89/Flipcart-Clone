@@ -861,7 +861,22 @@ body.dark-mode {
     color: #ff7777;
 }
 
+.wishlist-btn {
+    background: #fff;
+    color: #e91e63;
+    border: 1px solid #e91e63;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
 
+.wishlist-btn:hover {
+    background: #e91e63;
+    color: white;
+    transform: scale(1.05);
+}
 
 
 
