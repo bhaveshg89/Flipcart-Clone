@@ -222,11 +222,44 @@ function addToWishlist(productName) {
         alert(productName + " is already in your Wishlist ❤️");
     } else {
         wishlistItems.push(productName);
+        document.getElementById("wishlistCount").textContent =
+            wishlistItems.length;
+
         alert(productName + " added to Wishlist ❤️");
     }
 }
 
+function openWishlist() {
+    const wishlistDiv = document.getElementById("wishlistItems");
 
+    if (wishlistItems.length === 0) {
+        wishlistDiv.innerHTML = "<p>Your Wishlist is empty!</p>";
+    } else {
+        wishlistDiv.innerHTML = wishlistItems.map((item, index) => `
+            <p>
+                ${item}
+                <button onclick="removeFromWishlist(${index})">
+                    Remove
+                </button>
+            </p>
+        `).join("");
+    }
+
+    document.getElementById("wishlistPopup").style.display = "flex";
+}
+
+function closeWishlist() {
+    document.getElementById("wishlistPopup").style.display = "none";
+}
+
+function removeFromWishlist(index) {
+    wishlistItems.splice(index, 1);
+
+    document.getElementById("wishlistCount").textContent =
+        wishlistItems.length;
+
+    openWishlist();
+}
 
 
 

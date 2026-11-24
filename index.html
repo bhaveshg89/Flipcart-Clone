@@ -45,6 +45,11 @@
         <div class="cart" onclick="openCart()">
     🛒 Cart (<span id="cartCount">0</span>)
 </div>
+
+<div class="wishlist" onclick="openWishlist()">
+    ❤️ Wishlist (<span id="wishlistCount">0</span>)
+</div>
+
     </header>
     <!-- Categories -->
 
@@ -378,7 +383,18 @@
         <p>Your cart is empty.</p>
     </div>
 </div>
+<div id="wishlistPopup" class="wishlist-popup">
+    <div class="wishlist-box">
+        <span class="close-wishlist" onclick="closeWishlist()">×</span>
+        <h2>❤️ My Wishlist</h2>
+        <div id="wishlistItems">
+            <p>Your Wishlist is empty!</p>
+        </div>
+    </div>
+</div>
+
 <button id="backToTop" title="Go to Top">↑</button>
+
 <script src="script.js"></script>
 
 
