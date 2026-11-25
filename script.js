@@ -215,16 +215,24 @@ function sortProducts() {
     });
 }
 
-let wishlistItems = [];
+let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];
+
+function updateWishlistCount() {
+    document.getElementById("wishlistCount").textContent =
+        wishlistItems.length;
+}
+
+function saveWishlist() {
+    localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+    updateWishlistCount();
+}
 
 function addToWishlist(productName) {
     if (wishlistItems.includes(productName)) {
         alert(productName + " is already in your Wishlist ❤️");
     } else {
         wishlistItems.push(productName);
-        document.getElementById("wishlistCount").textContent =
-            wishlistItems.length;
-
+        saveWishlist();
         alert(productName + " added to Wishlist ❤️");
     }
 }
@@ -254,17 +262,11 @@ function closeWishlist() {
 
 function removeFromWishlist(index) {
     wishlistItems.splice(index, 1);
-
-    document.getElementById("wishlistCount").textContent =
-        wishlistItems.length;
-
+    saveWishlist();
     openWishlist();
 }
 
-
-
-
-
+updateWishlistCount();
 
 
 
